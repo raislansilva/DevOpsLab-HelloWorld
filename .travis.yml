@@ -14,9 +14,11 @@ install:
 
 # Defini o script de Teste que deve rodar toda vez que o código for alterado.
 script:
-  - python test.p
+  - python test.py
+
+# Defini que o processo de Deploy será na Plataforma Heroku. É necessário informar o nome da APP criada no Heroku
 deploy:
   provider: heroku
-  api_key:
-    secure: nm/M+KzNCexuW8RQ2HS5bSAzn+GAlyBk6ywZA0lteXpM068h50ZvHqxTp9yW9ZNZTa2adUMA75Ot2ttZx/ryv3OOeJK1fDGTcxS7tT1hgLzgV8okIUI+EHgALI0SgvC0fjWBGk6JTxHW0sGz7z7Q3ASBp1/jfLyj6tpUkqdWcWOohZOqgstSEidsAraAyljVWMW26eMYYp7AU3y6aVqrEzTfC9NU7UrjIj6ET5PClXdHWmk7pAmu6mf0rRCQlklAmKmfRNhqe9yhjcLSmcUJJokT2lDCjGrUnWRwFXOlMXzQljWZ7HeoegDy4QmkH0RbgoH+DOFOwpgedV1ZX5+V09Yn5ozuL60Uq5aWYi0TTLrmIJWj8Az8LH52n4x/3lJ/Wij/uF8ZXyBDVqw9IBjrFU2mbXCqaQN6lcowL4MWRT0u9LPfw8oKc1fg4JNfLp8euvyqOE+M01dxbqu9Y8uJRyfp60FewGI8iH5grWm5tRSrqb/zxvcV2lbnrDmM4r9goJpc8GDQsQLvTF64tu/9FqYewjvc0N/rX4lxBmfohTHMSoSOKr0Acl10ZtnAeo/D4IoFa3NRAm+VB8PmgwO0gwzdOdfdG2z4LBBfMjscY5wT66Y/OaUw6l2jHXX/Tz40cn8nKMiZ7TmeTKgEo1VFLegMhuIVjolnl2B8XTr2qlI=
+  api-key: 
+    secure: $HEROKU_API_KEY
   app: devopslabs-example
